@@ -405,42 +405,42 @@
 //     });
 // }
 
-$("#tabs").tabs(
-    {
-        hide: {effect: "clip", duration: 3000}
-    },
-    {
-        show: {effect: "clip", duration: 3000}
-    },
-    {
-        active: 1
-    },
-    {
-        classes: {
-            "ui-tabs-tab": "my_custom_link_active_red"
-        }
-    }
-);
+// $("#tabs").tabs(
+//     {
+//         hide: {effect: "clip", duration: 3000}
+//     },
+//     {
+//         show: {effect: "clip", duration: 3000}
+//     },
+//     {
+//         active: 1
+//     },
+//     {
+//         classes: {
+//             "ui-tabs-tab": "my_custom_link_active_red"
+//         }
+//     }
+// );
 
-$('.owl-carousel').owlCarousel({
-    loop:true,
-    margin:30,
-    nav:true,
-    dots:false,
-    mouseDrag:false,
-    autoplay:true,
-    autoplayTimeout: 1000,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:2
-        },
-        1000:{
-            items:3
-        }
-    }
-})
+// $('.owl-carousel').owlCarousel({
+//     loop:true,
+//     margin:30,
+//     nav:true,
+//     dots:false,
+//     mouseDrag:false,
+//     autoplay:true,
+//     autoplayTimeout: 1000,
+//     responsive:{
+//         0:{
+//             items:1
+//         },
+//         600:{
+//             items:2
+//         },
+//         1000:{
+//             items:3
+//         }
+//     }
+// })
 
 

@@ -57,7 +57,8 @@ const src = {
 
 // Получаем список файлов для отслеживания изменения HTML
 const htmlFiles = [
-    './src/*.html'
+    './src/*.html',
+    './src/**/*.html'
 ];
 
 
@@ -74,7 +75,7 @@ function styles() {
 
         // Добавить префиксы
         .pipe(autoprefixer({
-            //browsers: ['last 2 versions'],
+            overrideBrowserslist: ['last 2 versions'],
             cascade: false
         }))
 
@@ -118,10 +119,7 @@ function img() {
                 min: 70,
                 max: 80,
                 quality: 'high'
-            }),
-            imagemin.gifsicle(),
-            imagemin.optipng(),
-            imagemin.svgo()
+            })
         ]))
         .pipe(gulp.dest('build/img'));
 }
