@@ -686,3 +686,11 @@ a.tab_link:hover{
 .my_custom_link_active_red.ui-state-active {
     background: red;
 }
+
+.red {
+    border-color: red;
+}
+
+.green {
+    border-color: green;
+}

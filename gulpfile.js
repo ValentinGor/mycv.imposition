@@ -50,7 +50,7 @@ const src = {
     copy_files: [
         'src/*.html',
         'src/fonts/*',
-        'src/img/*',
+        //'src/img/*',
         'src/uploads/*',
     ]
 };

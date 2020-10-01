@@ -443,4 +443,39 @@
 //     }
 // })
 
+let inputSubmit = document.querySelector(".button-form");
+//console.log(inputSubmit);
 
+inputSubmit.onclick = function (e){
+    e.preventDefault();
+    //console.log(inputName.value);
+
+    let inputName = document.getElementById("in_name");
+    let inputEmail = document.getElementById("in_email");
+
+
+
+    if (inputName.value.length == 0){
+        inputName.classList.add("red");
+    } else {
+        inputName.classList.add("green");
+    }
+
+    if (inputEmail.value.length == 0){
+        inputEmail.classList.add("red");
+    } else {
+        inputEmail.classList.add("green");
+    }
+
+    //console.log(inputEmail.value);
+
+    let at = inputEmail.indexOf("@").value;
+    console.log(at);
+
+    document.getElementById("emailf").innerHTML = "*email введен не верно";
+
+    // if (at < 1) {
+    //     document.getElementById("emailf").innerHTML = "*email введен не верно";
+    //     return false;
+    // }
+}
