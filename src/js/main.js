@@ -446,36 +446,49 @@
 let inputSubmit = document.querySelector(".button-form");
 //console.log(inputSubmit);
 
-inputSubmit.onclick = function (e){
-    e.preventDefault();
+inputSubmit.onclick = function () {
+    //e.preventDefault();
     //console.log(inputName.value);
 
     let inputName = document.getElementById("in_name");
     let inputEmail = document.getElementById("in_email");
 
 
-
-    if (inputName.value.length == 0){
+    if (inputName.value.length == 0) {
         inputName.classList.add("red");
+        return false;
     } else {
         inputName.classList.add("green");
     }
 
-    if (inputEmail.value.length == 0){
+    if (inputEmail.value.length == 0) {
         inputEmail.classList.add("red");
+        document.getElementById("emailf").innerHTML = "*введите email";
+        return false;
+    } else if (inputEmail.value.indexOf('@', 0) == -1){
+        inputEmail.classList.add("red");
+        document.getElementById("emailf").innerHTML = "*email введен не верно";
+        return false;
     } else {
         inputEmail.classList.add("green");
     }
 
     //console.log(inputEmail.value);
 
-    let at = inputEmail.indexOf("@").value;
-    console.log(at);
-
-    document.getElementById("emailf").innerHTML = "*email введен не верно";
 
     // if (at < 1) {
     //     document.getElementById("emailf").innerHTML = "*email введен не верно";
     //     return false;
     // }
+}
+
+
+document.getElementById("sendHello").onclick = function (e){
+    e.preventDefault();
+    $.ajax({
+        url: 'test.html',
+        success: function (data){
+            $('#result').html(data);
+        }
+    })
 }
